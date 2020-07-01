@@ -44,13 +44,11 @@ grid_start = (local_position[0] - north_offset, local_position[1] - east_offset)
 ```
 
 ### Use arbitrary position as goal
-Set any arbitrary position as the global goal by specifying its longitude and latitude. These values are used to determine the local goal position in the grid.
+Set any arbitrary position as the global goal by specifying its longitude and latitude. These values are used to determine the local goal position in the grid.<br>
+Here is an example of how to run the simulation using an arbitrary position as goal:
 
-```python
-global_goal = [-122.397276, 37.795191, 0.0]
-local_goal = global_to_local(global_goal, self.global_home)
-grid_goal = (int(local_goal[0] - north_offset),
-             int(local_goal[1] - east_offset))
+```
+python motion_planning.py --goal_long=-122.397276 --goal_lat=37.795191
 ```
 
 ### Improve A* implementation
